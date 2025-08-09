@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+}
+
+/* Navigation */
+.header {
+    position: absolute;
+    width: 100%;
+    padding: 20px 50px;
+    z-index: 10;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    width: 150px;
+}
+.signin-btn {
+    background-color: #e50914;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 3px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hero */
+.hero {
+    height: 100vh;
+    background: url("https://assets.nflxext.com/ffe/siteui/vlv3/1b4b6d1f-5c33-4cf1-b72c-3a0ff39a6e8e/45048c6d-c40a-47f3-a39d-21a75d27be27/IN-en-20230220-popsignuptwoweeks-perspective_alpha_website_medium.jpg") no-repeat center center/cover;
+    position: relative;
+}
+.overlay {
+    background-color: rgba(0,0,0,0.6);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 650px;
+    text-align: center;
+    margin: auto;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+.hero-content h2 {
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+.hero-content p {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+form input {
+    padding: 15px;
+    width: 300px;
+    max-width: 100%;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+}
+form button {
+    padding: 15px 20px;
+    background-color: #e50914;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+form button:hover {
+    background-color: #f6121d;
+}
+.message {
+    margin-top: 15px;
+    color: yellow;
+}
+
+/* Feature Sections */
+.feature {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    border-top: 8px solid #222;
+}
+.feature.reverse {
+    flex-direction: row-reverse;
+}
+.feature .text {
+    flex: 1;
+    padding: 20px;
+}
+.feature .text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+.feature .media img {
+    max-width: 100%;
+    height: auto;
+    flex: 1;
+}
+
+/* FAQ */
+.faq {
+    text-align: center;
+    padding: 50px;
+    border-top: 8px solid #222;
+}
+.faq h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+.faq-item {
+    margin-bottom: 10px;
+    text-align: left;
+    max-width: 800px;
+    margin: 10px auto;
+}
+.faq-question {
+    width: 100%;
+    padding: 15px;
+    background-color: #303030;
+    border: none;
+    text-align: left;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.faq-answer {
+    display: none;
+    background-color: #303030;
+    padding: 15px;
+    font-size: 1rem;
+    border-top: 1px solid black;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 8px solid #222;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .feature {
+        flex-direction: column;
+        text-align: center;
+    }
+    .feature.reverse {
+        flex-direction: column;
+    }
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    form {
+        flex-direction: column;
+    }
+    form input {
+        margin-bottom: 10px;
+    }
+}
